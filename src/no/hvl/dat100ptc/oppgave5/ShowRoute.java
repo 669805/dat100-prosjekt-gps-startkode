@@ -52,18 +52,26 @@ public class ShowRoute extends EasyGraphics {
 
 	// antall y-pixels per breddegrad
 	public double ystep() {
+		
+		double maxlat= GPSUtils.findMax(GPSUtils.getLatitudes(gpspoints));
+		double minlat= GPSUtils.findMin(GPSUtils.getLatitudes(gpspoints));
 	
-		double ystep;
+		double ystep= MAPYSIZE/Math.abs(maxlat-minlat);
+		
+		return ystep;
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+//		throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - SLUTT
 		
 	}
 
 	public void showRouteMap(int ybase) {
+		double xstep=this.xstep();
+		double ystep=this.ystep();
+		System.out.print
 
 		// TODO - START
 		
